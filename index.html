@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://drive.google.com/uc?id=19zF7Lp7MqgDrp9r0G7yZ6aZnGZ6KDHVj">
+<link rel="icon" href="https://drive.google.com/uc?id=1h7wx4GlHlYHQJ87-mCMteusHs6VagxKY" />
+<link rel="apple-touch-icon" href="https://drive.google.com/uc?id=1BSm8M-1b2cwzbzfDTPPYt9viywkXKy4i" />
+<title>View My Profile</title>
+
+</head>
+
+<body>
+  <p id="countdown">You will be automatically redirected to my profile</p>
+  
+  <script>
+    var app = "vnd.youtube//youtube.com/redirect?event=comments&redir_token=QUFFLUhqa19qYXU5T2RhQ1RFTGxxdVhOVHpkbkFWWm1sQXxBQ3Jtc0tsSXFPMGRDdkp4WW5tNU01ZHRlWkJ2dFhoMTFOTDk2UE1GLWNWQV9fT2Q1RHpNbjQ5TnJRWWhjYWE3LUJXaEJJbHZZNG5zWm5qQXdya3R0NzAxNmpSVTNGS0pqUkFaTEtPdE5jcFlFeFI0NTYzc20wNA&q=https%3A%2F%2Fsnapbabes2.com%2F%3Futm_source%3DJEtZ91DudqZiE%26utm_campaign%3DMs_nayemssshb&html_redirect=1";
+
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+
+        if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          window.location.href = app;
+          window.setTimeout(function() {
+            window.location.href = mobileFallback;
+          }, 25);
+        } else {
+          window.location.href = desktopFallback;
+        }
+
+        function killPopup() {
+          window.removeEventListener('pagehide', killPopup);
+        }
+
+        window.addEventListener('pagehide', killPopup);
+      }, 10);
+    });
+  </script>
+
+</body>
+</html>
